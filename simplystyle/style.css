@@ -1,0 +1,44 @@
+/*
+Theme Name: Simply Style
+Theme URI: http://www.tairan.net/
+Description: very simply theme.
+Author: Tairan
+Version: 0.1
+Tags: YUI, Simply, Tairan
+
+General comments and license statement (optional).
+*/
+
+/* Browser specific (not valid) styles to make preformatted text wrap */
+pre {
+white-space: pre-wrap;       /* css-3 */
+white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+white-space: -pre-wrap;      /* Opera 4-6 */
+white-space: -o-pre-wrap;    /* Opera 7 */
+word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.block { margin-bottom:1.5em; border: 1px #CCCCCC solid; padding: 10px; }
+
+#navigation { margin-top:1.5em; background-color: #fff; height:1%; }
+#navigation li { float:left; display:inline; }
+#navigation li a { display:block; color:#000; text-decoration:none; }
+#navigation li a:hover { text-decoration:underline; }
+
+#primary-navigation li a { font-size:116%; padding:0.4em 1em; }
+#primary-navigation li.active a { background-color:#f0f0ee; color:#000; }
+
+#user-navigation { float:right; }
+#user-navigation li a { font-size:93%; padding:0.5em 1em; }
+
+.imgblock { text-align: center; }
+.imgblock img{ border: 1px #000 solid; padding: 3px; background-color: #F0F0EE; margin-left: auto; margin-right: auto}
+#bd img{ border: 1px #000 solid; padding: 3px; background-color: #F0F0EE; margin-left: auto; margin-right: auto}
+#bd p { font-family: "Microsoft YaHei",SimSun,"Segoe UI",Verdana,Arial,Sans-Serif; font-size: 1.1em; }
+
+.clear { clear:both; }
+.text-left { text-align:left; }
+.text-right { text-align:right; }
+.text-center { text-align:center; }
+/* Footer */
+#ft { text-align:center; font-size:85%; padding:0.5em 1em; color:#262626; }
