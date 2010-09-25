@@ -3,7 +3,7 @@ Theme Name: Simply Style
 Theme URI: http://www.tairan.net/
 Description: very simply theme.
 Author: Tairan
-Version: 0.1
+Version: 0.1.1
 Tags: YUI, Simply, Tairan
 
 General comments and license statement (optional).
@@ -20,9 +20,9 @@ word-wrap: break-word;       /* Internet Explorer 5.5+ */
 
 .block { margin-bottom:1.5em; border: 1px #CCCCCC solid; padding: 10px; }
 
-#navigation { margin-top:1.5em; background-color: #fff; height:1%; }
+#navigation { margin-top:1.5em; background-color: #fff; height:1%; border-bottom: 1px #CCCCCC solid; }
 #navigation li { float:left; display:inline; }
-#navigation li a { display:block; color:#000; text-decoration:none; }
+#navigation li a { display:block; color:#000; text-decoration:none; border-top: 1px #ccc solid; border-right: 1px #ccc solid; border-left: 1px #ccc solid;}
 #navigation li a:hover { text-decoration:underline; }
 
 #primary-navigation li a { font-size:116%; padding:0.4em 1em; }

@@ -12,17 +12,15 @@
     </head>
     <body>
         <div id="doc3" class="yui-t5">
-            <div id="hd">
-                <h1><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
-                <p><?php bloginfo('description'); ?></p>
+            <div id="hd">                
                     <div id="navigation">
                         <ul id="primary-navigation">
                             <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
-                        </ul>
-                        <ul id="user-navigation">
                             <li><a href="<?php bloginfo('rss2_url'); ?>">Rss</a></li>
                             <?php wp_register(); ?>
                             <li><?php wp_loginout(); ?></li>
                         </ul><div class="clear"></div>
                     </div>
+                <h1><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
+                <p><?php bloginfo('description'); ?></p>
             </div><!-- end of #hd -->
