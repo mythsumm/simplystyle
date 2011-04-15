@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title><?php wp_title(); ?> <?php bloginfo( 'name' ); ?></title>
+<!-- Framework CSS -->
+<link rel="stylesheet" href="http://www.blueprintcss.org/blueprint/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="http://www.blueprintcss.org/blueprint/print.css" type="text/css" media="print">
+<!--[if lt IE 8]><link rel="stylesheet" href="http://www.blueprintcss.org/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+<?php wp_head(); ?>
+<style type="text/css">
+
+.entry-post {
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border-bottom: dotted 1px #ccc;
+}
+.entry-title {font-size: 1.8em; border-bottom: solid 2px #ecfefc;}
+.entry-meta { font-size: 0.9em; }
+.entry-content { font-size: 1.2em; margin: 1em; dispaly: block;}
+.entry-utility { font-size: 0.9em; }
+
+.pagination { margin: 1em; padding: 2px; display: block; }
+
+.left { text-align: left; }
+.right { text-align: right; }
+.center { text-align: center; }
+
+</style>
+</head>
+
+<body>
+<div class="container">
+<div>Menu</div>
+<h2>Tairan's Story</h2>
+<h4 class="alt">subtitle</h4>
+<hr><!-- end of header -->
+<div class="span-16 append-1 colborder">
+<?php
+if(have_posts()):
+    while (have_posts()): the_post();
+?>
+<div class="entry-post">
+<div class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></div>
+<div class="entry-meta">Posted by<?php the_author(); ?> at <small><?php the_time('F jS, Y'); ?></div>
+<div class="entry-content">
+<?php the_content(); ?>
+</div>
+<div class="entry-utility"><?php comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?> | <?php the_tags('Tags:', ','); ?> | Categories: <?php the_category(', ') ?> </div>
+</div>
+<?php
+    endwhile;
+endif;
+?>
+<div class="pagination">
+    <div class="span-2 left"><?php posts_nav_link('','','&laquo; Previous Entries') ?></div>
+    <div class="span-6 prepend-2 append-2">&nbsp;</div>
+    <div class="span-2 last right"><a href=""><?php posts_nav_link('','Next Entries &raquo;','') ?></a></div>
+</div><!-- pagination -->
+
+</div>
+<div class="span-7 last">
+    <div class="widget">
+    <div class="widget-title">Douban</div>
+    <div class="widget-container">My douban list</div>
+    </div>
+    <?php get_siderbar(); ?>
+</div>
+<!-- end of content -->
+
+<?php wp_footer(); ?>
+</body>
+</html>
