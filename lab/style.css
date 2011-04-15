@@ -306,10 +306,11 @@ body { background-color: #808080; }
 
 #respond textarea { width: 100%; } 
 
-.widget { display: block; margin: 0 auto; }
+.widget { display: block; margin: 0 auto; margin-bottom: 1em; }
 .widget-title { font-size: 2em; }
 
 .pagination { margin: 1em; padding: 2px; display: block; }
+img { border: solid 1px #ccc; background-color: #fff; padding: 0.2em; }
 
 .left { text-align: left; }
 .right { text-align: right; }
